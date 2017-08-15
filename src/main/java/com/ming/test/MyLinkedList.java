@@ -1,7 +1,7 @@
 package com.ming.test;
 
 
-import org.jetbrains.annotations.NotNull;
+import com.sun.istack.internal.NotNull;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;

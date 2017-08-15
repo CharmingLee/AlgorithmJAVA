@@ -1,11 +1,11 @@
-package com.ming.test;
+package com.ming.test.Calculator;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by charminglee on 17-7-21.
- *
+ * 科学计算器
  */
 public class Calculator {
     private Map<String,Integer> map;

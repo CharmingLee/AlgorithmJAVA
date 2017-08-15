@@ -1,6 +1,4 @@
-package com.ming.test;
-
-import org.jetbrains.annotations.NotNull;
+package com.ming.test.Calculator;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
@@ -8,14 +6,13 @@ import java.util.NoSuchElementException;
 
 /**
  * Created by charminglee on 17-7-21.
- *
+ * 栈
  */
 public class Stack<T> implements Iterable<T>{
     private Node<T> first;
     private Node<T> last;
     private int size;
 
-    @NotNull
     public Iterator<T> iterator() {
         return new StackIterator();
     }
