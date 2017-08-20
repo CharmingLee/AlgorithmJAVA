@@ -6,7 +6,7 @@ package com.ming.test;
  */
 public class BuildTree {
 
-    public static class TreeNode<T>{
+    public static class TreeNode {
         public TreeNode(Integer data){
             this.data = data;
         }
@@ -100,13 +100,13 @@ public class BuildTree {
     }
 
     public static TreeNode createTree(){
-        TreeNode<Integer> root = new TreeNode<Integer>(6);
-        root.leftNode = new TreeNode<Integer>(2);
-        root.leftNode.leftNode = new TreeNode<Integer>(1);
-        root.leftNode.rightNode = new TreeNode<Integer>(4);
-        root.leftNode.rightNode.leftNode = new TreeNode<Integer>(3);
+        TreeNode root = new TreeNode(6);
+        root.leftNode = new TreeNode(2);
+        root.leftNode.leftNode = new TreeNode(1);
+        root.leftNode.rightNode = new TreeNode(4);
+        root.leftNode.rightNode.leftNode = new TreeNode(3);
 
-        root.rightNode = new TreeNode<Integer>(8);
+        root.rightNode = new TreeNode(8);
 
         return root;
     }
