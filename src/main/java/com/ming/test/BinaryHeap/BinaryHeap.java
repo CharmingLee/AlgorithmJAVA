@@ -68,7 +68,7 @@ public class BinaryHeap<T extends Comparable<? super T>> {
         int index;
         while (hole * 2 <= currentSize){
             index = hole*2;
-            if (array[index].compareTo(array[index+1]) > 0)
+            if (array[index+1] != null && array[index].compareTo(array[index+1]) > 0)
                 index++;
 
             if (x.compareTo(array[index]) > 0)
