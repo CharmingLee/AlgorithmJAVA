@@ -1,5 +1,9 @@
 package com.ming.test.BinaryHeap;
 
+/**
+ * 二叉堆
+ * @param <T>
+ */
 public class BinaryHeap<T extends Comparable<? super T>> {
     private static final int DEFAULT_SIZE = 10;
     private T[] array;
