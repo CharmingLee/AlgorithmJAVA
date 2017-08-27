@@ -2,7 +2,7 @@ package com.ming.test.AVLTree;
 
 /**
  * Created by charminglee on 17-7-28.
- *
+ *  AVL树
  */
 public class AVLTree <T extends Comparable<? super T>>{
 
