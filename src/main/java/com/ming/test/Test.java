@@ -1,21 +1,22 @@
 package com.ming.test;
 
-import com.ming.test.BinomialQueue.BinomialQueue;
+import com.ming.test.AVLTree.AVLTree;
 
 /**
  * Created by charminglee on 17-7-18.
  */
 public class Test {
     public static void main(String[] arg) {
-        BinomialQueue<Integer> newQueue = new BinomialQueue<>();
-        for (int i = 36; i > 0; i--) {
-            newQueue.insert(i);
-        }
+        AVLTree<Integer> avlTree = new AVLTree<>();
+        avlTree.insert(5);
+        avlTree.insert(4);
+        avlTree.insert(3);
+        avlTree.insert(2);
+        avlTree.insert(1);
 
+//        avlTree.remove(3);
 
-        int len = newQueue.getCurrentSize();
-        for (int i = 0; i < len; i++) {
-            System.out.println(newQueue.delMin());
-        }
+        avlTree.printTree();
+
     }
 }
