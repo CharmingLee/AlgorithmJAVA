@@ -1,6 +1,6 @@
 package com.ming.test;
 
-import com.ming.test.Sort.BinaryHeapSort;
+import com.ming.test.Sort.MergeSort;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class Test {
     public static void main(String[] arg) {
-        Integer[] arr = new Integer[7];
+        Integer[] arr = new Integer[8];
         arr[0] = 31;
         arr[1] = 41;
         arr[2] = 59;
@@ -17,10 +17,13 @@ public class Test {
         arr[4] = 53;
         arr[5] = 58;
         arr[6] = 97;
+        arr[7] = 97;
 
-        BinaryHeapSort<Integer> s = new BinaryHeapSort<>();
-        s.binaryHeapSort(arr);
+        MergeSort<Integer> s = new MergeSort<>();
+        s.mergeSort(arr);
 
         System.out.println(Arrays.asList(arr));
+
     }
+
 }
