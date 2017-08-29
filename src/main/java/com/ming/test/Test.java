@@ -1,22 +1,26 @@
 package com.ming.test;
 
-import com.ming.test.AVLTree.AVLTree;
+import com.ming.test.Sort.BinaryHeapSort;
+
+import java.util.Arrays;
 
 /**
  * Created by charminglee on 17-7-18.
  */
 public class Test {
     public static void main(String[] arg) {
-        AVLTree<Integer> avlTree = new AVLTree<>();
-        avlTree.insert(5);
-        avlTree.insert(4);
-        avlTree.insert(3);
-        avlTree.insert(2);
-        avlTree.insert(1);
+        Integer[] arr = new Integer[7];
+        arr[0] = 31;
+        arr[1] = 41;
+        arr[2] = 59;
+        arr[3] = 26;
+        arr[4] = 53;
+        arr[5] = 58;
+        arr[6] = 97;
 
-//        avlTree.remove(3);
+        BinaryHeapSort<Integer> s = new BinaryHeapSort<>();
+        s.binaryHeapSort(arr);
 
-        avlTree.printTree();
-
+        System.out.println(Arrays.asList(arr));
     }
 }
