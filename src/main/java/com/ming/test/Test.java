@@ -1,6 +1,6 @@
 package com.ming.test;
 
-import com.ming.test.Sort.MergeSort;
+import com.ming.test.Sort.QuickSort;
 
 import java.util.Arrays;
 
@@ -19,8 +19,8 @@ public class Test {
         arr[6] = 97;
         arr[7] = 97;
 
-        MergeSort<Integer> s = new MergeSort<>();
-        s.mergeSort(arr);
+        QuickSort<Integer> s = new QuickSort<>();
+        s.quickSort(arr);
 
         System.out.println(Arrays.asList(arr));
 
