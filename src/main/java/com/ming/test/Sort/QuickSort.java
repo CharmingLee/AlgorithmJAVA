@@ -21,8 +21,8 @@ public class QuickSort <T extends Comparable<? super T>> {
             int j = right -1;
 
             while (true){
-                while (arr[++i].compareTo(pivot) < 0){};
-                while (arr[--j].compareTo(pivot) > 0){};
+                while (arr[++i].compareTo(pivot) < 0);
+                while (arr[--j].compareTo(pivot) > 0);
 
                 if (i < j){
                     swapReferences(arr, i, j);
