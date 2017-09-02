@@ -1,22 +1,23 @@
 package com.ming.test;
 
-import com.ming.test.AVLTree.AVLTree;
+import java.util.Arrays;
 
 /**
  * Created by charminglee on 17-7-18.
  */
 public class Test {
     public static void main(String[] arg) {
-        AVLTree<Integer> avlTree = new AVLTree<>();
-        avlTree.insert(5);
-        avlTree.insert(4);
-        avlTree.insert(3);
-        avlTree.insert(2);
-        avlTree.insert(1);
+        int[] i1 = {1,2};
+        int[] i2 = {3,4};
 
-//        avlTree.remove(3);
+        int[] a1 = i1;
+        int[] a2 = i2;
 
-        avlTree.printTree();
+        int[] temp = a1;
+        a1 = a2;
+        a2 = temp;
 
+        System.out.println(Arrays.toString(a1));
+        System.out.println(Arrays.toString(a2));
     }
 }
