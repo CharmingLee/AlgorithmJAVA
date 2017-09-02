@@ -1,7 +1,7 @@
 package com.ming.test.BinaryHeap;
 
 /**
- * 二叉堆
+ * 二叉堆(Min)
  * @param <T>
  */
 public class BinaryHeap<T extends Comparable<? super T>> {
