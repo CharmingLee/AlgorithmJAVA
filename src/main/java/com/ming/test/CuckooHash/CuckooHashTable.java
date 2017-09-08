@@ -1,4 +1,4 @@
-package com.ming.test.cuckooHash;
+package com.ming.test.CuckooHash;
 
 import java.util.Random;
 

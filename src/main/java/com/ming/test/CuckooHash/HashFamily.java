@@ -1,4 +1,4 @@
-package com.ming.test.cuckooHash;
+package com.ming.test.CuckooHash;
 
 /**
  * 布谷鸟散列表函数
