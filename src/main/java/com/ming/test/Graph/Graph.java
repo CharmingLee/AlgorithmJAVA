@@ -80,6 +80,14 @@ public class Graph {
         return new LinkedList<>();
     }
 
+    public int getV() {
+        return V;
+    }
+
+    public int getE() {
+        return E;
+    }
+
     @Override
     public String toString() {
         String str = this.E + " edge " + this.V + " vertex \r\n";
