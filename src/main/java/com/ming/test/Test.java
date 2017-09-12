@@ -1,6 +1,12 @@
 package com.ming.test;
 
-import java.io.*;
+import com.ming.test.Graph.BreadthFirstPath;
+import com.ming.test.Graph.DepthFirstPath;
+import com.ming.test.Graph.Graph;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.LinkedList;
 
 /**
  * Created by charminglee on 17-7-18.
@@ -8,19 +14,12 @@ import java.io.*;
 public class Test {
 
     public static void main(String[] arg) throws IOException {
-//        File f = new File("/Users/charminglee/Desktop/a.txt");
-        FileInputStream fin = new FileInputStream("/Users/charminglee/Desktop/a.txt");
-        InputStreamReader reader = new InputStreamReader(fin);
-        BufferedReader buff = new BufferedReader(reader);
-        String line = buff.readLine();
-        while (line != null){
-            System.out.println(line);
-            line = buff.readLine();
-        }
+        FileInputStream fin = new FileInputStream("/home/charminglee/桌面/a.txt");
+        Graph g = new Graph(fin);
 
-        buff.close();
-        reader.close();
-        fin.close();
+        BreadthFirstPath path = new BreadthFirstPath(g, 0);
+        System.out.println(path.PathTo(6));
+
     }
 
 

@@ -1,34 +1,37 @@
 package com.ming.test.Graph;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
- * 深度优先搜索路径
+ * 广度优先路径搜索
  */
-public class DepthFirstPath {
+public class BreadthFirstPath {
     private boolean[] marked;
     private int[] edgeTo;
     private final int s;
 
-    /**
-     *
-     * @param g 图数据结构
-     * @param s 起点
-     */
-    public DepthFirstPath(Graph g, int s){
+    public BreadthFirstPath(Graph g, int s){
         this.s = s;
         this.marked = new boolean[g.getV()];
         this.edgeTo = new int[g.getV()];
 
-        dfs(g, s);
+        bfs(g, s);
     }
 
-    private void dfs(Graph g, int v){
+    private void bfs(Graph g, int v){
+        LinkedList<Integer> queue = new LinkedList<>();
         this.marked[v] = true;
-        for (int e : g.adj(v)) {
-            if (!this.marked[e]){
-                this.edgeTo[e] = v;
-                dfs(g, e);
+        queue.addLast(v);
+
+        while (!queue.isEmpty()){
+            Integer pop = queue.pop();
+            for (int w: g.adj(pop)) {
+                if (!marked[w]){
+                    marked[w] = true;
+                    edgeTo[w] = pop;
+                    queue.addLast(w);
+                }
             }
         }
     }
