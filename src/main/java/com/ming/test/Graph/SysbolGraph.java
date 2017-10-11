@@ -19,24 +19,7 @@ public class SysbolGraph {
 
     /**
      *
-     * JFK MCO
-     * ORD DEM
-     * ORD HOU
-     * DFW PHK
-     * JFK ATL
-     * ORD DFW
-     * ORD PHX
-     * ATL HOU
-     * DEN PHX
-     * PHX LAX
-     * JFK ORD
-     * DEN LAS
-     * DFW HOU
-     * ORD ATL
-     * LAS LAX
-     * ATL MCO
-     * HOU MCO
-     * LAS PHX
+     * routes.txt
      * @param delim
      * @throws IOException
      */
