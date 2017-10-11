@@ -30,7 +30,7 @@ public class BreadthFirstPath {
                 if (!marked[w]){
                     marked[w] = true;
                     edgeTo[w] = pop;
-                    queue.addLast(w);
+                    queue.push(w);
                 }
             }
         }
