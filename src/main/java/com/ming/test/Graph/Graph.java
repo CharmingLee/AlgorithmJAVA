@@ -40,8 +40,8 @@ public class Graph {
             adj[i] = new LinkedList<Integer>();
         }
 
-        buff.readLine();//因前2行表示顶点数和边数，读到第二行
-        for (int i = 0; i < this.V; i++) {
+        this.E = Integer.valueOf(buff.readLine());
+        for (int i = 0; i < this.E; i++) {
             String str = buff.readLine();
             String[] split = str.split(" ");
             int v = Integer.valueOf(split[0]);
