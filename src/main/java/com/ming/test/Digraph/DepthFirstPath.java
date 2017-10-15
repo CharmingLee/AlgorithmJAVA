@@ -37,7 +37,7 @@ public class DepthFirstPath {
 
     public Iterable<Integer> PathTo(int v){
         if (!hasPathTo(v)){
-            return  null;
+            return  new Stack<>();
         }
 
         Stack<Integer> stack = new Stack<>();
