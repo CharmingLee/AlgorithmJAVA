@@ -54,8 +54,8 @@ public class Graph {
     }
 
     public void addEde(int v, int w) {
-        adj[v].add(w);
-        adj[w].add(v);
+        adj[v].push(w);
+        adj[w].push(v);
         this.E++;
     }
 

@@ -59,7 +59,7 @@ public class Digraph {
     }
 
     public void add(int v, int w){
-        this.adj[v].add(w);
+        this.adj[v].push(w);
         this.E ++;
     }
 
