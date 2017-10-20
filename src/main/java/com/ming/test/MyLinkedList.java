@@ -1,8 +1,5 @@
 package com.ming.test;
 
-
-import com.sun.istack.internal.NotNull;
-
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -128,8 +125,6 @@ public class MyLinkedList<T> implements Iterable<T> {
         modCount++;
     }
 
-
-    @NotNull
     public Iterator<T> iterator() {
         return new MyLinkedListIterator();
     }
