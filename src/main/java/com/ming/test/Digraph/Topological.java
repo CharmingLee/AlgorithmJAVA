@@ -1,13 +1,13 @@
 package com.ming.test.Digraph;
 
-import java.util.Stack;
+import java.util.LinkedList;
 
 /**
  * Created by charminglee on 17-10-19.
  */
 public class Topological {
 
-    private Stack<Integer> order;
+    private LinkedList<Integer> order;
 
     public Topological(Digraph g){
         DireckedCycle cycle = new DireckedCycle(g);
@@ -17,7 +17,7 @@ public class Topological {
         }
     }
 
-    public Stack<Integer> getOrder() {
+    public LinkedList<Integer> getOrder() {
         return order;
     }
 

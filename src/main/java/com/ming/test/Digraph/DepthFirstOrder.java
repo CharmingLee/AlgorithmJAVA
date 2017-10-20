@@ -1,6 +1,7 @@
 package com.ming.test.Digraph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -11,16 +12,17 @@ public class DepthFirstOrder {
     private boolean[] marked;
     private List<Integer> pre;
     private List<Integer> post;
-    private Stack<Integer> reversePost;
+    private LinkedList<Integer> reversePost;
 
     public DepthFirstOrder(Digraph g){
         this.marked = new boolean[g.getV()];
         this.pre = new ArrayList<>();
         this.post = new ArrayList<>();
-        this.reversePost = new Stack<>();
+        this.reversePost = new LinkedList<>();
 
         for (int v = 0; v < g.getV(); v++)
-            dfs(g, v);
+            if (!marked[v])
+                dfs(g, v);
     }
 
     private void dfs(Digraph g, int v){
@@ -44,7 +46,7 @@ public class DepthFirstOrder {
         return post;
     }
 
-    public Stack<Integer> getReversePost() {
+    public LinkedList<Integer> getReversePost() {
         return reversePost;
     }
 }
