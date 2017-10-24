@@ -7,7 +7,9 @@ public class Main {
 
     public static void main(String[] agr) throws Exception {
         Digraph digraph = new Digraph("/home/charminglee/Desktop/图/tinyDG.txt");
-        KosarajuSCC kosarajuSCC = new KosarajuSCC(digraph);
+        TransitiveClosure c = new TransitiveClosure(digraph);
+
+        System.out.println(c.reachable(9, 12));
 
     }
 
