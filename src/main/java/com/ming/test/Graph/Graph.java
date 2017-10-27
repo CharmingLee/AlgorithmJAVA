@@ -40,8 +40,8 @@ public class Graph {
             adj[i] = new LinkedList<Integer>();
         }
 
-        this.E = Integer.valueOf(buff.readLine());
-        for (int i = 0; i < this.E; i++) {
+        int e = Integer.valueOf(buff.readLine());
+        for (int i = 0; i < e; i++) {
             String str = buff.readLine();
             String[] split = str.split(" ");
             int v = Integer.valueOf(split[0]);
