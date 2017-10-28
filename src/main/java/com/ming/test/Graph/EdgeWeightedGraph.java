@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 
 /**
+ * 基于边权重值的图
  * Created by charminglee on 17-10-27.
  */
 public class EdgeWeightedGraph {
@@ -74,4 +75,7 @@ public class EdgeWeightedGraph {
         return edges;
     }
 
+    public int getV() {
+        return V;
+    }
 }

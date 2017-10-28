@@ -1,6 +1,7 @@
 package com.ming.test.Graph;
 
 /**
+ * 边
  * Created by charminglee on 17-10-27.
  */
 public class Edge implements Comparable<Edge> {
