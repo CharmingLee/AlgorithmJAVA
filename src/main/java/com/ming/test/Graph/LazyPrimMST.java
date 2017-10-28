@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 /**
+ * prim延迟算法
  * Created by charminglee on 17-10-28.
  */
 public class LazyPrimMST {
