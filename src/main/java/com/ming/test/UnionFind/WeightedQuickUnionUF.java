@@ -78,7 +78,7 @@ public class WeightedQuickUnionUF implements UF {
 
     @Override
     public boolean connected(int p, int q) {
-        return id[p] == id[q];
+        return find(p) == find(q);
     }
 
     @Override
