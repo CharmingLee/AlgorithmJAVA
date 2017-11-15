@@ -1,20 +1,19 @@
 package com.ming.test;
 
-import com.ming.test.RBTree.RedBlackBST;
+import com.ming.test.Digraph.DijkstraSP;
+import com.ming.test.Digraph.EdgeWeightedDigraph;
+
+import java.io.IOException;
 
 /**
  * Created by charminglee on 17-7-18.
  */
 public class Test {
 
-    public static void main(String[] arg) {
-        RedBlackBST<String, String> bst = new RedBlackBST<>();
-        bst.put("s","s");
-        bst.put("e","e");
-        bst.put("a","a");
-
-        System.out.println(bst.getCount());
+    public static void main(String[] arg) throws IOException {
+        EdgeWeightedDigraph g = new EdgeWeightedDigraph("/home/charminglee/Desktop/图/tinyEWD.txt");
+        DijkstraSP sp = new DijkstraSP(g, 0);
+        System.out.println(sp.pathTo(6));
     }
-
 
 }

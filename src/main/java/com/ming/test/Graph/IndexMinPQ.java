@@ -5,7 +5,7 @@ import java.util.TreeMap;
 /**
  * Created by charminglee on 17-10-30.
  */
-public class IndexMinPQ<K extends Comparable<? super K>, V extends Comparable<? super V>> extends TreeMap<K , V> {
+public class IndexMinPQ<K, V extends Comparable<? super V>> extends TreeMap<K , V> {
 
     public K delMin(){
         K min = null;
