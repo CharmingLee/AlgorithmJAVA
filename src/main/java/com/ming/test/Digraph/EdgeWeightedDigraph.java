@@ -15,6 +15,13 @@ public class EdgeWeightedDigraph {
     private int V;
     private LinkedList<DirectedEdge>[] adj;
 
+    public EdgeWeightedDigraph(int v){
+        this.V = v;
+        this.adj = new LinkedList[this.V];
+        for (int i = 0; i < this.V; i++)
+            this.adj[i] = new LinkedList<>();
+    }
+
     public EdgeWeightedDigraph(String fileName) throws IOException {
         FileInputStream in = new FileInputStream(fileName);
         InputStreamReader reader = new InputStreamReader(in);
@@ -42,7 +49,7 @@ public class EdgeWeightedDigraph {
         return this.adj[v];
     }
 
-    private void add(DirectedEdge edge){
+    public void add(DirectedEdge edge){
         this.adj[edge.from()].push(edge);
         this.E++;
     }

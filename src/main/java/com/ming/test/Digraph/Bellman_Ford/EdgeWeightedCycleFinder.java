@@ -10,13 +10,13 @@ import java.util.LinkedList;
  */
 public class EdgeWeightedCycleFinder {
     private boolean[] marked;
-    private int[] edgeTo;
-    private LinkedList<Integer> cycle;//有向环的顶点
+    private DirectedEdge[] edgeTo;
+    private LinkedList<DirectedEdge> cycle;//有向环的顶点
     private boolean[] onStack;//当前栈上的点
 
     public EdgeWeightedCycleFinder(EdgeWeightedDigraph g){
         this.marked = new boolean[g.getV()];
-        this.edgeTo = new int[g.getV()];
+        this.edgeTo = new DirectedEdge[g.getV()];
         this.onStack = new boolean[g.getV()];
 
         for (int v = 0; v < g.getV(); v++)
@@ -29,18 +29,18 @@ public class EdgeWeightedCycleFinder {
         this.onStack[v] = true;
         for (DirectedEdge e : g.adj(v)) {
             int w = e.to();
+
             if (hasCycle()){
                 return;
             } else if (!this.marked[w]){
-                this.edgeTo[w] = v;
+                this.edgeTo[w] = e;
                 dfs(g, w);
             } else if (this.onStack[w]){
                 this.cycle = new LinkedList<>();
-                for (int i = v; i != w ; i = edgeTo[i])
-                    this.cycle.push(i);
+                for (int i = v; i != w ; i = edgeTo[i].from())
+                    this.cycle.push(edgeTo[i]);
 
-                this.cycle.push(w);
-                this.cycle.push(v);
+                this.cycle.push(e);
             }
         }
 
@@ -51,7 +51,7 @@ public class EdgeWeightedCycleFinder {
         return this.cycle != null;
     }
 
-    public LinkedList<Integer> cycle(){
+    public LinkedList<DirectedEdge> cycle(){
         return this.cycle;
     }
 }
